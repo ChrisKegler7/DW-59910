@@ -1,0 +1,402 @@
+/* Estilos generales */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+}
+
+
+body {
+    background-color: #ebded2;
+}
+
+/* Estilos del header */
+header {
+    position: relative;
+    background-color: #944E63;
+    padding: 10px 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-html{
+    position: absolute;
+    left: 300px;
+    font-family: 'Playfair Display', serif;
+    color: #dbc9a7;
+}
+
+
+/* Logo alineado a la izquierda en index.html */
+.logo-index {
+    margin-right: 1500px;
+    max-height: 90px;
+}
+
+/* Logo centrado en otras páginas */
+.logo{
+    margin: 0 auto;
+    max-height: 90px;
+    display: block;
+}
+
+/* Menú de navegación */
+.main-menu {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    right: 50px;
+    top: 75px;
+    display: flex;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.main-menu ul li {
+    margin: 0px 2px;
+}
+
+.main-menu ul li a {
+    display: block;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: #dbc9a7;
+    background-color: #944E63;
+    border: none;
+    border-bottom: 2px solid #dbc9a7;
+    border-radius: 8px 8px 0 0;
+}
+
+
+.main-menu ul li a.active {
+    color: #944E63; 
+    background-color: #ebded2; 
+    border-bottom: 2px solid #ebded2;
+}
+
+
+.main-menu ul li a:hover {
+    background-color: #dbc9a7;
+    color: #944E63;
+    border-bottom: 2px solid #944E63; 
+}
+
+
+body main h1{
+    display: block;
+    text-align: center;
+    margin: 2%;
+}
+
+body main h2{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 200%; 
+}
+
+body main section{
+    display: block;
+    margin-top: 20px;
+    margin-left: 200px;
+    max-width: 40%;
+}
+
+body main div img{
+    max-height: 500px;
+    display: flex ;
+    margin-left: auto;
+    margin-right: 400px;
+}
+
+/* Estilos generales para el catálogo */
+.catalogo {
+    padding: 20px;
+    max-width: 80%; 
+    margin: 0% auto;
+    text-align: center; 
+}
+
+/* Estilo para los items del catálogo */
+.catalogo-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.catalogo-items .item {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalogo-items .item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.catalogo-items .item h3 {
+    margin: 15px 0 10px;
+    color: #944E63;
+}
+
+.catalogo-items .item p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-detalles {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #944E63;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Estilos para la página de detalles */
+.detalles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.fondo-libro {
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.pagina-izquierda, .pagina-derecha {
+    width: 48%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.pagina-izquierda img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.pagina-derecha h2 {
+    margin-bottom: 20px;
+    color: #944E63;
+}
+
+.pagina-derecha p {
+    color: #666;
+}
+
+
+/* estilos de opiniones */
+
+
+
+.opiniones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.opinion {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opinion-texto {
+    margin-bottom: 10px;
+}
+
+.opinion-rating {
+    display: flex;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    background: url('../img/star.png');
+    background-size: contain;
+    margin: 0 2px;
+}
+
+.star.full {
+    background-position: 0 0;
+}
+
+.star.half {
+    background-position: -20px 0;
+}
+
+.star.empty {
+    background: none;
+}
+
+.crear-opinion {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #944E63;
+    color:  #dbc9a7;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    max-width: 150px;
+    text-align: center; 
+}
+
+
+.crear-opinion:hover{
+    background-color: #7e4d72;
+}
+
+/* Estilos para el formulario de opiniones */
+
+.formulario-opinion {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #dbc9a7;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+.campo-formulario {
+    margin-bottom: 15px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo-formulario input[type="text"],.campo-formulario textarea,.campo-formulario select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.campo-formulario button {
+    background-color: #7e4d72;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.campo-formulario button:hover {
+    background-color: #5f3550;
+}
+
+/* Sección de perfil de usuario */
+.perfil-usuario {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.perfil-usuario h2 {
+    font-size: 2em;
+    color: #7e4d72;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.perfil-usuario h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.perfil-usuario p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.perfil-usuario .btn-detalles {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #dbc9a7;
+    color: #7e4d72;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.perfil-usuario .btn-detalles:hover {
+    background-color: #7e4d72;
+    color: #dbc9a7;
+}
+
+.perfil-usuario .info-perfil, 
+.perfil-usuario .historial-pedidos, 
+.perfil-usuario .lista-deseos, 
+.perfil-usuario .opciones-usuario {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+.perfil-usuario ul {
+    list-style: none;
+    padding: 0;
+}
+
+.perfil-usuario ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+/* Estilos del footer */
+footer {
+    background-color: #944E63;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 50px;
+    -webkit-text-fill-color: #dbc9a7;
+    text-align: center;
+}

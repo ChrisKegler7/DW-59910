@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Opinión</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo-html">Reseñas</h1>
+        <a href="../index.html"><img src="../img/logo2.png" alt="logo InkSpot" class="logo"></a>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="opiniones.html" class="active">Opiniones</a></li>
+                <li><a href="usuario.html">Usuario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Escribir una Opinión</h1>
+        <section class="formulario-opinion">
+            <form action="#" method="post">
+                <div class="campo-formulario">
+                    <label for="nombre-usuario">Nombre de Usuario:</label>
+                    <input type="text" id="nombre-usuario" name="nombre-usuario" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="titulo-opinion">Título del libro:</label>
+                    <input type="text" id="titulo-opinion" name="titulo-opinion" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="texto-opinion">Que te parecio?:</label>
+                    <textarea id="texto-opinion" name="texto-opinion" rows="5" required></textarea>
+                </div>
+                <div class="campo-formulario">
+                    <label for="calificacion">Calificación:</label>
+                    <select id="calificacion" name="calificacion" required>
+                        <option value="5">★★★★★</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="1">★☆☆☆☆</option>
+                    </select>
+                </div>
+                <div class="campo-formulario">
+                    <button type="submit" class="btn-enviar">Enviar Opinión</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
