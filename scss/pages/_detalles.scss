@@ -1,0 +1,60 @@
+// Estilos para la página de detalles
+.detalles {
+    @include flex(column, center, center);
+    height: 80vh;
+}
+
+.fondo-libro {
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    padding: $padding-standard;
+}
+
+.pagina-izquierda, .pagina-derecha {
+    width: 40%;
+    padding: $padding-standard;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 15px 15px $color-primary;
+    border: 1px solid #6f4c3e;
+    position: relative; 
+    overflow: hidden; 
+    margin-right: -1px; 
+    text-align: center;
+}
+
+.pagina-izquierda img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: $border-radius;
+    margin: auto;
+}
+
+.pagina-derecha h2 {
+    margin-bottom: 15px;
+    color: $color-primary;
+}
+
+.pagina-derecha h3 {
+    margin-bottom: 50px;
+}
+
+.pagina-derecha h4 {
+    margin-bottom: 50px;
+}
+
+.pagina-derecha p {
+    color: black;
+    text-align: center;
+}
+
+.btn-regresar{
+    @include button();
+    margin-top: 25px;
+    padding: 10px;
+}
+

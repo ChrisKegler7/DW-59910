@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Lee las opiniones de nuestros lectores sobre sus libros favoritos en InkSpot. Descubre lo que piensan sobre nuestras lecturas más populares.">
+        <meta name="keywords" content="opiniones de libros, reseñas de libros, comentarios de lectores, libros InkSpot">
+        <meta name="author" content="InkSpot">
+        <title>Opiniones de libros - InkSpot</title>
+        <link rel="icon" href="../img/icon.png" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    
 <body>
     <header>
         <h1 class="titulo-html">Reseñas</h1>
-        <a href="../index.html"><img src="../img/logo2.png" alt="logo InkSpot" class="logo"></a>
+        <a href="../index.html"><img src="../img/Isotipo.png" alt="Logo de InkSpot" class="logo"></a>
         <nav class="main-menu">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
@@ -19,85 +23,159 @@
                 <li><a href="opiniones.html" class="active">Opiniones</a></li>
             </ul>
         </nav>
-        <div class="btn-group bg-custom">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                <img src="../img/6596121.png" alt="imagen de usuario" class="img-usuario">
+        <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../img/user.png" alt="Perfil de usuario" class="img-usuario">
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="usuario.html">Perfil</a></li>
-                <li><a class="dropdown-item" href="#">Deseados</a></li>
-                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+              <li><a class="dropdown-item" href="usuario.html">Perfil</a></li>
+              <li><a class="dropdown-item" href="#">Deseados</a></li>
+              <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
             </ul>
-        </div>        
+          </div>      
     </header>
     <main>
-        <h2>Lo que la piensan nuestros lectores</h2>
-        <a href="../pages/nueva-opinion.html" class="crear-opinion">Deja una reseña</a>
-        <div class="opiniones-container">
-            <div class="opinion">
-                <div class="opinion-texto">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at vestibulum dui.</p>
+        <main>
+            <h2>Opiniones de nuestros lectores</h2>
+            <a href="../pages/nueva-opinion.html" class="crear-opinion">Deja tu opinión</a>
+            <div class="opiniones-container">
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        <p class="opinion-header">"El Gran Gatsby" - Opinión de Juan Pérez</p>
+                        <h4>"Una historia apasionante que me mantuvo en vilo desde la primera página. Definitivamente recomendaría este libro a cualquier amante de la ficción."</h4>
+                    </div>
+                    <div class="opinion-rating">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star empty"></span>
+                    </div>
                 </div>
-                <div class="opinion-rating">
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star half"></span>
-                    <span class="star empty"></span>
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        <p class="opinion-header">"Cien Años de Soledad" - Opinión de Ana Gómez</p>
+                        <h4>"Me encantó el desarrollo de los personajes y la forma en que Gabriel García Márquez entrelaza sus historias. Una lectura conmovedora."</h4>
+                    </div>
+                    <div class="opinion-rating">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star half"></span>
+                        <span class="star empty"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="opinion">
-                <div class="opinion-texto">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at vestibulum dui.</p>
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        <p class="opinion-header">"Orgullo y Prejuicio" - Opinión de María López</p>
+                        <h4>"El final me sorprendió completamente. Una excelente mezcla de drama y romance."</h4>
+                    </div>
+                    <div class="opinion-rating">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star empty"></span>
+                    </div>
                 </div>
-                <div class="opinion-rating">
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star half"></span>
-                    <span class="star empty"></span>
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        <p class="opinion-header">"1984" - Opinión de Carlos Ruiz</p>
+                        <h4>"Un libro fácil de leer, con una prosa simple pero eficaz. Perfecto para una tarde tranquila."</h4>
+                    </div>
+                    <div class="opinion-rating">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star half"></span>
+                        <span class="star empty"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="opinion">
-                <div class="opinion-texto">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at vestibulum dui.</p>
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        <p class="opinion-header">"Crimen y Castigo" - Opinión de Fernando Morales</p>
+                        <h4>"Aunque al principio me costó entrar en la historia, los últimos capítulos lo compensaron todo."</h4>
+                    </div>
+                    <div class="opinion-rating">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star empty"></span>
+                        <span class="star empty"></span>
+                    </div>
                 </div>
-                <div class="opinion-rating">
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star half"></span>
-                    <span class="star empty"></span>
+            </div> 
+            <div class="opiniones-container">
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        <p class="opinion-header">"Los Pilares de la Tierra" - Opinión de Miguel Hernández</p>
+                        <h4>"Una obra maestra de Ken Follett. La historia de la construcción de una catedral es apasionante y está llena de intrigas."</h4>
+                    </div>
+                    <div class="opinion-rating">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="opinion">
-                <div class="opinion-texto">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at vestibulum dui.</p>
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        <p class="opinion-header">"La Sombra del Viento" - Opinión de Clara Martínez</p>
+                        <h4>"Un libro que me atrapó desde la primera página. La atmósfera de Barcelona y el misterio que rodea al libro perdido son fascinantes."</h4>
+                    </div>
+                    <div class="opinion-rating">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star half"></span>
+                    </div>
                 </div>
-                <div class="opinion-rating">
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star half"></span>
-                    <span class="star empty"></span>
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        <p class="opinion-header">"El Alquimista" - Opinión de José Ríos</p>
+                        <h4>"Un viaje espiritual que invita a seguir tus sueños. La narrativa es simple, pero las lecciones son profundas."</h4>
+                    </div>
+                    <div class="opinion-rating">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star empty"></span>
+                        <span class="star empty"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="opinion">
-                <div class="opinion-texto">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at vestibulum dui.</p>
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        <p class="opinion-header">"El Juego del Ángel" - Opinión de Lucía Gómez</p>
+                        <h4>"Una continuación brillante de 'La Sombra del Viento'. La historia es oscura y intrigante, con un giro que no vi venir."</h4>
+                    </div>
+                    <div class="opinion-rating">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star half"></span>
+                    </div>
                 </div>
-                <div class="opinion-rating">
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star full"></span>
-                    <span class="star half"></span>
-                    <span class="star empty"></span>
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        <p class="opinion-header">"El Amor en los Tiempos del Cólera" - Opinión de Ana Torres</p>
+                        <h4>"Una exploración hermosa y melancólica del amor. La prosa de García Márquez es, como siempre, poética y envolvente."</h4>
+                    </div>
+                    <div class="opinion-rating">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                    </div>
                 </div>
-            </div>
+            </div>                       
     </main>
     <footer>
         <p>Todos los derechos reservados</p>
-        <nav class="main-menu">
+        <nav class="footer-menu">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="catalogo.html">Catálogo</a></li>
@@ -105,5 +183,6 @@
             </ul>
         </nav>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

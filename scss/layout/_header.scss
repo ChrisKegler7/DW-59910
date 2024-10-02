@@ -1,0 +1,80 @@
+/* Estilos del header */
+header {
+    background-color: $color-primary;
+    width: 100%;
+    @include grid(repeat(7, 1fr), 1fr, center);
+    height: 100px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+
+    .titulo-html {
+        @include grid-item(1 / span 3);
+        display: block;
+        font-family: $font-family-primary;
+        color: $color-secondary;
+        text-align: center;
+    }
+
+    .logo-index {
+        @include grid-item(1 / span 2);
+        max-height: 90px;
+        margin: 5px;
+        margin-left: 50px;
+        display: block;
+    }
+
+    .logo {
+        @include grid-item(4 / span 2);
+        margin: 0 auto;
+        max-height: 100px;
+        display: block;
+    }
+
+    /* Menu de navegacion */
+    .main-menu {
+        @include grid-item(6 / span 2);
+        font-family: $font-family-primary;
+        @include flex(center, flex-end);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: auto;
+        margin: 0;
+        padding: 0;
+
+        ul {
+            @include flex(row, flex-start, center);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin: 0 5px;
+
+                a {
+                    display: block;
+                    padding: 6px 10px;
+                    text-decoration: none;
+                    color: $color-secondary;
+                    background-color: $color-primary;
+                    border: none;
+                    border-bottom: 2px solid $color-secondary;
+                    border-radius: 8px 8px 0 0;
+
+                    &.active {
+                        color: $color-primary;
+                        background-color: $color-background;
+                        border-bottom: 2px solid $color-background;
+                    }
+
+                    &:hover {
+                        background-color: $color-secondary;
+                        color: $color-primary;
+                        border-bottom: 2px solid $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}

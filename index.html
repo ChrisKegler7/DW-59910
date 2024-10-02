@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InkSpot</title>
+    <meta name="description" content="InkSpot - Librería en línea. Explora nuestros libros destacados, participa en eventos literarios y suscríbete para recibir ofertas especiales.">
+    <meta name="keywords" content="librería, libros online, eventos literarios, venta de libros">
+    <title>InkSpot - Librería en Línea | Compra Libros, Reseñas y Eventos Literarios</title>
+    <link rel="icon" href="./img/icon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <img src="/img/logo.png" alt="logo InkSpot" class="logo-index">
+        <img src="./img/Imagotipo.png" alt="Logo de InkSpot, librería en línea" class="logo-index">
         <nav class="main-menu">
             <ul>
                 <li><a href="index.html" class="active">Inicio</a></li>
@@ -18,14 +19,14 @@
                 <li><a href="pages/opiniones.html">Opiniones</a></li>
             </ul>
         </nav>
-        <div class="btn-group bg-custom">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-              <img src="img/6596121.png" alt="imagen de usuario" class="img-usuario">
+        <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./img/user.png" alt="imagen de usuario" class="img-usuario">
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="pages/usuario.html">Perfil</a></li>
               <li><a class="dropdown-item" href="#">Deseados</a></li>
-              <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+              <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
             </ul>
           </div>
     </header>
@@ -34,47 +35,64 @@
             <h1>Somos InkSpot</h1>
             <div class="texto-imagen">
                 <section class="contenido-principal-texto">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vero inventore ipsum dicta fugit consequuntur molestiae error, repellat sunt qui non, sit minima voluptatum nobis praesentium architecto enim iure vel.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vero inventore ipsum dicta fugit consequuntur molestiae error, repellat sunt qui non, sit minima voluptatum nobis praesentium architecto enim iure vel.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vero inventore ipsum dicta fugit consequuntur molestiae error, repellat sunt qui non, sit minima voluptatum nobis praesentium architecto enim iure vel.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, cumque laboriosam deleniti ex, amet repellat corporis assumenda ipsa numquam esse obcaecati placeat odit cum temporibus maiores reprehenderit, magni dolor tenetur.</p>
+                    <h2>Nuestra Historia</h2>
+                    <p>InkSpot es una librería fundada en 2005 por Marta y Julián, dos apasionados de la lectura que soñaban con crear un espacio donde los libros fueran los protagonistas. Con una amplia selección de títulos nuevos y de segunda mano, nos hemos convertido en un referente para los amantes de los libros en la ciudad y más allá.</p>
+                    <p>Comenzamos como un pequeño negocio familiar y, con el tiempo, nuestra pasión nos ha llevado a expandirnos tanto física como digitalmente. Hoy en día, InkSpot no es solo una librería, sino un punto de encuentro para lectores de todas las edades.</p>
+                    <p>Ofrecemos una experiencia literaria completa, desde eventos con autores hasta la posibilidad de vender tus propios libros usados a otros lectores que buscan nuevas historias.</p>
                 </section>
                 <div class="contenido-principal-imagen">
-                    <img src="img/_730b9984-325b-4af8-87ec-011ccb128b46.jpeg" alt="imagen ilustrativa">
+                    <img src="./img/Ilustrative.jpeg" alt="imagen ilustrativa">
                 </div>
             </div>
         </section>
-
+        <section class="eventos">
+            <h2>Próximos eventos</h2>
+            <ul>
+                <li><button><strong>Firma de libros:</strong> El autor Juan Pérez estará firmando ejemplares de su nueva novela "Historias de la Luna" el próximo sábado 25 de octubre.</button></li>
+                <li><button><strong>Taller de escritura:</strong> Un taller gratuito de escritura creativa para principiantes. Inscríbete antes del 1 de noviembre.</button></li>
+            </ul>
+        </section>
         <section class="destacados">
-            <h2>Destacados</h2>
+            <h2>Libros Destacados</h2>
             <div class="destacados-items">
                 <div class="destacado-item">
-                    <img src="img/_730b9984-325b-4af8-87ec-011ccb128b46.jpeg" alt="Destacado 1">
-                    <h3>Destacado 1</h3>
-                    <p>Descripción del producto.</p>
-                    <a href="#" class="btn-detalles">Más detalles</a>
+                    <img src="./img/libros/1984.webp" alt="Portada de 1984 de George Orwell">
+                    <h3>1984 - George Orwell</h3>
+                    <p>Una de las novelas más influyentes del siglo XX. Descubre el inquietante mundo distópico que presenta George Orwell.</p>
+                    <a href="./pages/detalles-varios/det-1984.html" class="btn-detalles">Más detalles</a>
                 </div>
                 <div class="destacado-item">
-                    <img src="img/_730b9984-325b-4af8-87ec-011ccb128b46.jpeg" alt="Destacado 2">
-                    <h3>Destacado 2</h3>
-                    <p>Descripción del producto.</p>
-                    <a href="#" class="btn-detalles">Más detalles</a>
+                    <img src="./img/libros/orgullo-y-prejuicio.webp" alt="Portada de Orgullo y prejuicio">
+                    <h3>Orgullo y prejuicio</h3>
+                    <p>Una novela sobre el amor y las relaciones en la Inglaterra del siglo XIX.</p>
+                    <a href="./pages/detalles-varios/det-orgullo.html" class="btn-detalles">Más detalles</a>
+                </div>
+                <div class="destacado-item">
+                    <img src="./img/libros/fahrenheit-451.webp" alt="Portada de Fahrenheit 451">
+                    <h3>Fahrenheit 451</h3>
+                    <p>Una crítica a la censura y el control de la información.</p>
+                    <a href="./pages/detalles-varios/det-farenheit.html" class="btn-detalles">Más detalles</a>
+                </div>
+                <div class="destacado-item">
+                    <img src="./img/libros/cien-años-de-soledad.jpg" alt="Portada de Cien años de soledad">
+                    <h3>Cien años de soledad</h3>
+                    <p>Una obra maestra del realismo mágico que narra la historia de la familia Buendía a lo largo de varias generaciones.</p>
+                    <a href="./pages/detalles-varios/det-cienanios.html" class="btn-detalles">Más detalles</a>
                 </div>
             </div>
-        </section>
-
+        </section> 
         <section class="cta">
             <h2>¡Suscríbete a nuestro boletín!</h2>
-            <p>Recibe las últimas noticias, ofertas y actualizaciones directamente en tu bandeja de entrada.</p>
+            <p>Recibe nuestras últimas noticias, ofertas especiales y eventos literarios directamente en tu bandeja de entrada.</p>
             <form action="#" method="post">
-                <input type="email" placeholder="Introduce tu email" required>
-                <button type="submit">Suscribirse</button>
+            <input type="email" placeholder="Introduce tu email" required>
+            <button type="submit">Suscribirse</button>
             </form>
-        </section>
+        </section>   
     </main>  
     <footer>
         <p>Todos los derechos reservados</p>
-        <nav class="main-menu">
+        <nav class="footer-menu">
             <ul>
                 <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="pages/catalogo.html">Catálogo</a></li>
@@ -82,5 +100,6 @@
             </ul>
         </nav>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+/* Estilos del footer */
+footer {
+    background-color: $color-primary;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 60px;
+    color: $color-secondary;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    z-index: 1000;
+
+    p{
+        margin-top: 20px;
+    }
+
+    /* Menu de navegacion en el footer */
+    .footer-menu {
+        @extend .main-menu;
+        display: none;  
+        position: static;
+        text-align: center;
+    }
+    
+}

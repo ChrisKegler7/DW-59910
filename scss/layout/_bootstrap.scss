@@ -1,0 +1,85 @@
+.btn-group {
+    @include grid-item(7); 
+    @include flex(column, center); // Alinear elementos en columna y centrarlos
+    position: relative; // Permitir que el dropdown se posicione correctamente
+    margin-left: 80px;
+    
+    .btn-secondary {
+        background-color: $color-primary; 
+        border-color: $color-background;
+        border-radius: $border-radius;
+        max-width: 60px; 
+        max-height: 50px;
+        padding: 4px 8px; // Ajustar padding para un botón más pequeño
+        font-size: 14px; // Ajustar el tamaño de la fuente
+        
+        // Efecto hover
+        &:hover {
+            background-color: $color-background; 
+            border-color: $color-primary;
+        }
+    }
+
+    .dropdown-menu {
+        background-color: $color-background; 
+        border: 1px solid $color-primary;
+        max-width: 200px; // Ancho máximo del dropdown
+        width: 100%; // Hacer que el ancho sea 100% del contenedor
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: absolute; // Posicionamiento absoluto
+        top: calc(100% + 5px); // Posicionar justo debajo del botón con margen
+        left: 0; // Alinear con el borde izquierdo del contenedor
+        display: none; // Ocultar el dropdown por defecto
+
+        // Mostrar el dropdown al hacer clic (Bootstrap se encargará de esto)
+        &.show {
+            display: block; // Mostrar el dropdown cuando está activo
+        }
+    }
+
+    .dropdown-item {
+        color: black; 
+        padding: 8px 12px; // Espaciado interno
+
+        &:hover {
+            background-color: $color-primary;
+            color: white;
+        }
+    }
+}
+
+/* Perfil del usuario */
+.img-usuario {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid $color-secondary;
+    object-fit: cover;
+}
+
+// Estilos de la barra de busqueda
+.navbar.bg-body-tertiary {
+    border-bottom: 2px solid $color-secondary; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.navbar .container-fluid {
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center; 
+}
+
+.navbar .form-control {
+    background-color: inherit; 
+    border-color: $color-secondary; 
+    color: #333; 
+}
+
+.navbar .btn-outline-success {
+    @include button();
+}

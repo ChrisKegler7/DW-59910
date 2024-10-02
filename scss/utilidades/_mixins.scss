@@ -1,0 +1,76 @@
+@import './variables';
+
+@mixin flex(
+  $direction: row, 
+  $justify: flex-start, 
+  $align: stretch, 
+  $wrap: nowrap, 
+  $align-content: normal
+) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+    align-content: $align-content;
+}
+@mixin grid(
+  $columns: 1fr, 
+  $rows: auto, 
+  $gap: 0, 
+  $auto-rows: auto, 
+  $auto-flow: row
+) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    grid-auto-rows: $auto-rows;
+    grid-auto-flow: $auto-flow;
+    gap: $gap;
+}
+
+
+@mixin grid-item($column, $row: auto) {
+    grid-column: $column;
+    grid-row: $row;
+}
+
+@mixin border(
+    $width: 1px,
+    $style: solid,
+    $color: #a8a8a8,
+    $radius: $border-radius
+) {
+    border: $width $style $color;
+    border-radius: $radius;
+}
+
+
+@mixin button(
+  $background-color: $color-primary, 
+  $text-color: $color-secondary, 
+  $hover-background-color: $color-secondary, 
+  $hover-text-color: $color-primary
+) {
+    background-color: $background-color;
+    color: $text-color;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color $transition-duration, color $transition-duration;
+    border-color: transparent;
+
+    &:hover {
+        background-color: $hover-background-color;
+        color: $hover-text-color;
+        box-shadow: 0 1px 5px black;
+    }
+}
+
+@mixin hover-item($duration: 0.4s) {
+    transition: transform $duration, box-shadow $duration; // Agrega la transición con una duración por defecto
+    &:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+}
+

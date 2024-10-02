@@ -1,0 +1,56 @@
+// Estilos generales para el catálogo
+.catalogo {
+    padding: $padding-standard;
+    max-width: 80%; 
+    margin: 0 auto;
+    text-align: center; 
+}
+
+// Estilo para los items del catálogo
+.catalogo-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.catalogo-items .item {
+    display: flex;  
+    flex-direction: column; 
+    justify-content: space-between; 
+    background-color: #fff;
+    padding: 15px;
+    max-height: 550px;
+    @include hover-item;
+    @include border();
+}
+
+.catalogo-items .item img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover; 
+    border-radius: $border-radius;
+}
+
+.catalogo-items .item h3 {
+    margin: 10px 0 5px;
+    color: $color-primary;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.precio {
+    font-weight: bold;
+    color: $color-hover; 
+    font-size: 1.2em; 
+    margin-top: auto;
+}
+
+// Estilo para el botón de detalles
+.btn-detalles {
+    @include button();
+    padding: 1px;
+    font-size: 18px;
+    margin-top: 10px;
+}

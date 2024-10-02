@@ -1,0 +1,70 @@
+/* Sección de perfil de usuario */
+.perfil-usuario {
+    @include flex(column, center, center); 
+    max-width: 800px;
+    margin: 30px auto; 
+    padding: $padding-standard; 
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    @include border(); 
+    width: 100%; 
+}
+
+.perfil-usuario h2 {
+    font-size: 2em;
+    color: $color-primary;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.perfil-usuario h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.perfil-usuario p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.perfil-usuario .btn-detalles {
+    @include button(); 
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none; 
+}
+
+.perfil-usuario .info-perfil, 
+.perfil-usuario .historial-pedidos, 
+.perfil-usuario .lista-deseos {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f8f8;
+    @include border();
+    @include flex(column, flex-start, center); 
+    width: 100%; 
+}
+
+.perfil-usuario .opciones-usuario {
+    @include flex(row, center, center); 
+    gap: 10px;
+    width: 55%;
+}
+
+.perfil-usuario .opciones-usuario .btn-detalles {
+    @include button();
+    flex: 1; 
+    text-align: center;
+    width: 100%;
+}
+
+.perfil-usuario ul {
+    list-style: none;
+    padding: 0;
+}
+
+.perfil-usuario ul li {
+    padding: 10px;
+    border-bottom: 1px #ccc;
+}

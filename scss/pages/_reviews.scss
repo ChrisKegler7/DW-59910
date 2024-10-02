@@ -1,0 +1,102 @@
+// Estilos de opiniones
+.opiniones-container {
+    @include grid(repeat(auto-fit, minmax(300px, 1fr)), auto, 20px);
+    padding:  $padding-standard;
+}
+
+.opinion {
+    background-color: #fff; 
+    @include border(); 
+    display: flex;
+    flex-direction: column;
+    margin: 5% 5% 5% ;
+    padding: 0%;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow $transition-duration; 
+    @include hover-item; 
+}
+
+.opinion-header {
+    background-color: $color-primary;
+    color: #fff; /* Color del texto del header */
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.opinion-texto {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.opinion-rating {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    background: url('../img/star.png');
+    background-size: contain;
+    margin: 0 2;
+}
+
+.star.full {
+    background-position: 0 0;
+}
+
+.star.half {
+    background-position: -20px 0; 
+}
+
+.star.empty {
+    background: none; 
+}
+
+.crear-opinion {
+    @include button();
+    @include border(); 
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 150px;
+    text-align: center; 
+}
+
+/* Estilos para el formulario de opiniones */
+.formulario-opinion {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: $padding-standard;
+    @include border();
+    background-color: #f5f5f5; 
+}
+
+.campo-formulario {
+    margin-bottom: 15px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo-formulario input[type="text"],
+.campo-formulario textarea,
+.campo-formulario select {
+    width: 100%;
+    padding: 10px;
+    @include border(); 
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.campo-formulario button {
+    @include button();
+    @include border();
+    padding: 10px 15px;
+}

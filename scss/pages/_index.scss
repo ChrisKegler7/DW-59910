@@ -1,0 +1,178 @@
+@import '../utilidades/variables';
+
+// Contenido principal
+.contenido-principal {
+    @include flex(column, center);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.texto-imagen {
+    @include flex();
+    width: 100%;
+}
+
+.contenido-principal-texto {
+    padding: $padding-standard;
+    max-width: 60%;
+    text-align: left;
+}
+
+.contenido-principal-imagen {
+    flex: 1;
+    max-width: 40%;
+}
+
+.contenido-principal-imagen img {
+    width: 100%;
+    border-radius: $border-radius;
+}
+
+// Estilos para los destacados
+.destacados {
+    padding: 50px;
+    padding-top: 2px;
+    padding-bottom: 100px;
+}
+
+.destacados h2 {
+    font-size: 2em;
+    color: $color-primary;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.destacados-items {
+    @include grid(repeat(auto-fit, minmax(200px, 1fr)));
+    gap: 20px;
+    justify-content: center;
+}
+
+.destacado-item {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    background-color: #fff;
+    padding: 15px;
+    border-radius: $border-radius;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%; 
+    @include border();
+    @include hover-item;
+}
+
+.destacado-item img {
+    max-width: 50%;
+    height: auto;
+    border-radius: $border-radius;
+    margin: 0 auto;
+    display: block;
+}
+
+.destacado-item h3 {
+    margin: 15px 0 10px;
+    color: $color-primary;
+    text-align: center;
+    min-height: 50px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+
+.destacado-item p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-detalles {
+    @include flex(row, center);
+    @include button();
+    padding: 10px 20px; 
+    font-size: 20px;
+    margin-top: auto; 
+}
+
+.eventos {
+    padding: $padding-standard;
+    background-color: $color-primary;
+    border-radius: $border-radius; 
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 5); 
+    text-align: center;
+    margin: 40px 0;
+
+    h2 {
+        font-size: 2em; // Tamaño de la fuente para el título
+        color: $color-secondary; // Color primario
+        margin-bottom: 20px; // Espaciado inferior
+    }
+
+    ul {
+        list-style: none;
+        
+        li button {
+            background-color: #fff; // Color de fondo blanco para cada elemento
+            margin: 10px 0; // Espaciado entre elementos
+            padding: 15px; // Espaciado interno
+            border: 1px solid #ddd; // Bordes suaves
+            border-radius: $border-radius;
+            box-shadow: 0 1px 3px rgb(15, 15, 15);
+            transition: transform $transition-duration;
+            @include button($color-background, $color-primary, $color-secondary, $color-primary);
+
+            &:hover {
+                transform: translateY(-2px); 
+            }
+        }
+    }
+}
+
+// Estilos para la sección de suscripción
+.cta {
+    padding: $padding-standard; // Espaciado interno estándar
+    background-color: $color-primary; // Color de fondo
+    border-radius: $border-radius; // Bordes redondeados
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 5); // Sombra sutil
+    text-align: center; // Centra el texto
+    margin: 40px 0; // Margen superior e inferior
+    color: #fff;
+}
+
+.cta h2 {
+    color: $color-secondary;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta form {
+    @include flex(row, center);
+    gap: 10px;
+}
+
+.cta input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+.cta button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: $border-radius;
+    font-size: 1em;
+    cursor: pointer;
+
+    @include button($color-background, $color-primary, $color-secondary, $color-primary);
+}
+
