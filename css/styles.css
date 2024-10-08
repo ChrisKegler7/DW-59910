@@ -921,6 +921,62 @@ footer .footer-menu {
     max-width: 100%;
     margin-top: 20px;
   }
+  /* Ocultar la página izquierda (imagen del libro) */
+  .pagina-izquierda {
+    display: none;
+  }
+  /* Ajuste de la sección de detalles */
+  .detalles {
+    height: auto;
+    padding: 10px;
+  }
+  /* Ajustar la página derecha para pantallas muy pequeñas */
+  .pagina-derecha {
+    width: 100%;
+  }
+}
+/* Media queries para pantallas medianas (768px a 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Ocultar la página izquierda (imagen del libro) */
+  .pagina-izquierda {
+    display: none;
+  }
+  /* Ajuste de la sección de detalles */
+  .detalles {
+    height: auto;
+    padding: 15px;
+  }
+  /* Ajustar la página derecha para pantallas medianas */
+  .pagina-derecha {
+    width: 100%;
+  }
+  /* Ajustar encabezados */
+  .pagina-derecha h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  .pagina-derecha h3 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+  .pagina-derecha h4 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  /* Ajustar el texto */
+  .pagina-derecha p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 10px;
+    margin-bottom: 10px;
+  }
+  /* Ajuste del botón de regresar */
+  .btn-regresar {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    width: auto;
+    margin-top: 20px;
+  }
 }
 /* Media queries para pantallas grandes */
 @media screen and (min-width: 769px) {
