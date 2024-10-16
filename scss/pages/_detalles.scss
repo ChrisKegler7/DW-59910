@@ -55,7 +55,7 @@
 
 .btn-regresar{
     @include button();
-    margin-top: 25px;
+    margin-top: auto;
     padding: 10px;
 }
 
@@ -88,7 +88,7 @@
 /* Ajuste de la sección de detalles */
 .detalles {
     height: auto; 
-    padding: 10px; 
+    padding: 10px;
 }
 
 /* Ajustar la página derecha para pantallas muy pequeñas */
@@ -97,3 +97,25 @@
 
 }
 }
+
+/*Media Queries*/
+
+@media screen and (max-width: 1250px) {
+    .pagina-izquierda, .pagina-derecha {
+        height: auto;  
+        padding: $padding-standard;
+        margin-bottom: 20px;
+        width: 100%;  
+        height: auto; 
+    }
+
+    .detalles {
+        @include flex(column, center, center); 
+        height: auto;  
+        padding-bottom: 20px;
+        margin: 20px;
+    }
+}
+
+
+

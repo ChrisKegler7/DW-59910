@@ -10,6 +10,7 @@
   src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
 }
 body {
+  min-width: 320px;
   background-color: #ebded2;
   padding-bottom: 70px;
   font-family: "Playfair Display", serif;
@@ -863,7 +864,7 @@ footer {
   border-radius: 8px;
   transition: background-color 0.3s, color 0.3s;
   border-color: transparent;
-  margin-top: 25px;
+  margin-top: auto;
   padding: 10px;
 }
 .btn-regresar:hover {
@@ -911,6 +912,27 @@ footer {
   /* Ajustar la página derecha para pantallas muy pequeñas */
   .pagina-derecha {
     width: 100%;
+  }
+}
+/*Media Queries*/
+@media screen and (max-width: 1250px) {
+  .pagina-izquierda, .pagina-derecha {
+    height: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+  }
+  .detalles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: normal;
+    height: auto;
+    padding-bottom: 20px;
+    margin: 20px;
   }
 }
 .opiniones-container {
