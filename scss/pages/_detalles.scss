@@ -10,12 +10,13 @@
     width: 80%;
     height: 100%;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     padding: $padding-standard;
 }
 
 .pagina-izquierda, .pagina-derecha {
-    width: 40%;
+    @include flex(column, center, center);
+    width: 45%;
     padding: $padding-standard;
     background-color: white;
     border-radius: 18px;
@@ -25,11 +26,12 @@
     overflow: hidden; 
     margin-right: -1px; 
     text-align: center;
+    max-height: 100%;
 }
 
 .pagina-izquierda img {
-    max-width: 100%;
-    height: 100%;
+    max-width: 80%;
+    height: 80%;
     border-radius: $border-radius;
     margin: auto;
 }
@@ -44,6 +46,7 @@
 }
 
 .pagina-derecha h4 {
+    width: 80%;
     margin-bottom: 50px;
     font-style: oblique;
 }
@@ -53,69 +56,54 @@
     text-align: center;
 }
 
-.btn-regresar{
+.pagina-derecha h4, .pagina-derecha p, .pagina-derecha h2 {
+    flex-shrink: 1; 
+    word-wrap: break-word;
+}
+
+.btn-regresar {
     @include button();
     margin-top: auto;
     padding: 10px;
 }
 
-/* Media Queries */
-@media screen and (max-width: 768px) {
-.contenido-principal {
-    @include flex(column, center);
-}
-
-.texto-imagen {
-    @include flex(column); 
-    width: 100%; 
-}
-
-.contenido-principal-texto {
-    max-width: 100%;
-    text-align: center;
-}
-
-.contenido-principal-imagen {
-    max-width: 100%; 
-    margin-top: 20px; 
-}
-
-    /* Ocultar la página izquierda (imagen del libro) */
-.pagina-izquierda {
-    display: none;
-}
-
-/* Ajuste de la sección de detalles */
-.detalles {
-    height: auto; 
-    padding: 10px;
-}
-
-/* Ajustar la página derecha para pantallas muy pequeñas */
-.pagina-derecha {
-    width: 100%; 
-
-}
-}
-
-/*Media Queries*/
-
+/*Media Queries*/ 
+/* pantallas medianas */   
 @media screen and (max-width: 1250px) {
     .pagina-izquierda, .pagina-derecha {
-        height: auto;  
-        padding: $padding-standard;
+        width: 100%;
+        height: auto;
         margin-bottom: 20px;
-        width: 100%;  
-        height: auto; 
+        padding: $padding-standard;
+    }
+
+    .pagina-derecha h4 {
+        font-size: 1.2rem;
+        margin-bottom: 30px; /* Reduce margen para mejor ajuste */
+    }
+}
+
+/* pantallas pequeñas */ 
+@media screen and (max-width: 768px) {
+    .pagina-izquierda {
+        display: none; /* Ocultar página izquierda en pantallas pequeñas */
+    }
+
+    .pagina-derecha {
+        width: 100%; 
+    }
+
+    .pagina-derecha h4 {
+        font-size: 1rem;
+        margin-bottom: 20px; /* Reduce el margen en pantallas pequeñas */
     }
 
     .detalles {
-        @include flex(column, center, center); 
-        height: auto;  
-        padding-bottom: 20px;
-        margin: 20px;
+        height: auto;
+        padding: 10px;
+    }
+
+    .btn-regresar {
+        font-size: 0.9rem; 
     }
 }
-
-
-

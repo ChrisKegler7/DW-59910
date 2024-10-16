@@ -819,7 +819,13 @@ footer {
 }
 
 .pagina-izquierda, .pagina-derecha {
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: normal;
+  width: 45%;
   padding: 20px;
   background-color: white;
   border-radius: 18px;
@@ -829,11 +835,12 @@ footer {
   overflow: hidden;
   margin-right: -1px;
   text-align: center;
+  max-height: 100%;
 }
 
 .pagina-izquierda img {
-  max-width: 100%;
-  height: 100%;
+  max-width: 80%;
+  height: 80%;
   border-radius: 8px;
   margin: auto;
 }
@@ -848,6 +855,7 @@ footer {
 }
 
 .pagina-derecha h4 {
+  width: 80%;
   margin-bottom: 50px;
   font-style: oblique;
 }
@@ -855,6 +863,11 @@ footer {
 .pagina-derecha p {
   color: black;
   text-align: center;
+}
+
+.pagina-derecha h4, .pagina-derecha p, .pagina-derecha h2 {
+  flex-shrink: 1;
+  word-wrap: break-word;
 }
 
 .btn-regresar {
@@ -873,66 +886,38 @@ footer {
   box-shadow: 0 1px 5px black;
 }
 
-/* Media Queries */
-@media screen and (max-width: 768px) {
-  .contenido-principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    align-content: normal;
+/*Media Queries*/
+/* pantallas medianas */
+@media screen and (max-width: 1250px) {
+  .pagina-izquierda, .pagina-derecha {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px;
   }
-  .texto-imagen {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    align-content: normal;
+  .pagina-derecha h4 {
+    font-size: 1.2rem;
+    margin-bottom: 30px; /* Reduce margen para mejor ajuste */
+  }
+}
+/* pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .pagina-izquierda {
+    display: none; /* Ocultar página izquierda en pantallas pequeñas */
+  }
+  .pagina-derecha {
     width: 100%;
   }
-  .contenido-principal-texto {
-    max-width: 100%;
-    text-align: center;
+  .pagina-derecha h4 {
+    font-size: 1rem;
+    margin-bottom: 20px; /* Reduce el margen en pantallas pequeñas */
   }
-  .contenido-principal-imagen {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-  /* Ocultar la página izquierda (imagen del libro) */
-  .pagina-izquierda {
-    display: none;
-  }
-  /* Ajuste de la sección de detalles */
   .detalles {
     height: auto;
     padding: 10px;
   }
-  /* Ajustar la página derecha para pantallas muy pequeñas */
-  .pagina-derecha {
-    width: 100%;
-  }
-}
-/*Media Queries*/
-@media screen and (max-width: 1250px) {
-  .pagina-izquierda, .pagina-derecha {
-    height: auto;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    height: auto;
-  }
-  .detalles {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    align-content: normal;
-    height: auto;
-    padding-bottom: 20px;
-    margin: 20px;
+  .btn-regresar {
+    font-size: 0.9rem;
   }
 }
 .opiniones-container {
