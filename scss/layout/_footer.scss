@@ -1,4 +1,7 @@
-/* Estilos del footer */
+/* Importar variables */
+@import "../utilidades/variables";
+
+/* Estilos del footer*/
 footer {
     background-color: $color-primary;
     position: fixed;
@@ -6,15 +9,63 @@ footer {
     bottom: 0;
     height: 60px;
     color: $color-secondary;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    z-index: 1000;
+    @include flex(row, space-between, center); 
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
 
-    p{
-        margin-top: 20px;
+/* Sección principal del footer con mixin flex */
+.footer-sections {
+    @include flex(row, space-between, center);
+    flex-grow: 1;
+}
+
+/* Sección de contacto */
+.footer-contacto {
+    h5 {
+        margin: 0;
+        font-size: 1.2em;
+        text-decoration: underline;
     }
+
+    p {
+        margin: 0;
+        font-size: 0.85em;
+        line-height: 1.2em;
+    }
+}
+
+/* Sección de derechos reservados */
+.footer-derechos {
+    margin-left: 20px;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+/* Links en el footer utilizando mixin button */
+.footer-links {
+    margin: 0 20px;
+    margin-top: 15px;
+    a {
+        @include button();
+        padding: 5px 10px;
+        font-size: 1em;
+    }
+}
+
+/* Ajustes responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    footer {
+        @include flex(); 
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .footer-sections {
+       display: none;
+}
+}
 
     /* Menu de navegacion en el footer */
     .footer-menu {
@@ -23,5 +74,73 @@ footer {
         position: static;
         text-align: center;
     }
+
+
+/* Media Queries */
+
+/* Pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    /* Oculta el menú en el header */
+    header .main-menu {
+        display: none;
+    }
+
+    footer{
+        padding-top: 0;
+        p{
+            display: none;
+        }
+    }
     
+    /* Muestra el menú en el footer */
+    footer .footer-menu {
+        display: flex;
+        flex-direction: column;
+        background-color: $color-primary;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Estilos de header pero invertidos */
+    footer .footer-menu ul {
+        @include flex(row, center);
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    footer .footer-menu ul li {
+        margin: 0 8px;
+    }
+
+    footer .footer-menu ul li a {
+        display: block;
+        padding: 6px 10px;
+        text-decoration: none;
+        color: $color-secondary;
+        background-color: $color-primary;
+        border-radius: 0px 0px 8px 8px;
+        border-top: 2px solid $color-secondary;
+
+        &.active {
+            color: $color-primary;
+            background-color: $color-background;
+            border-top: 2px solid $color-background;
+            
+        }
+
+        &:hover {
+            background-color: $color-secondary;
+            color: $color-primary;
+            border-top: 2px solid $color-secondary;
+        }
+        
+    }
+}
+/* Pantallas grandes*/ 
+@media screen and (min-width: 769px) {
+    /* Oculta el menú en el footer en pantallas grandes */
+    footer .footer-menu {
+        display: none;
+    }
 }

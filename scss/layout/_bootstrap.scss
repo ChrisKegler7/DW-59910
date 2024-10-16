@@ -1,7 +1,6 @@
 .btn-group {
-    @include grid-item(7); 
-    @include flex(column, center); // Alinear elementos en columna y centrarlos
-    position: relative; // Permitir que el dropdown se posicione correctamente
+    @include grid-item(7 /span 1); 
+    align-items: center;
     margin-left: 80px;
     
     .btn-secondary {
@@ -10,10 +9,9 @@
         border-radius: $border-radius;
         max-width: 60px; 
         max-height: 50px;
-        padding: 4px 8px; // Ajustar padding para un botón más pequeño
-        font-size: 14px; // Ajustar el tamaño de la fuente
+        padding: 4px 8px;
+        font-size: 14px;
         
-        // Efecto hover
         &:hover {
             background-color: $color-background; 
             border-color: $color-primary;
@@ -23,23 +21,23 @@
     .dropdown-menu {
         background-color: $color-background; 
         border: 1px solid $color-primary;
-        max-width: 200px; // Ancho máximo del dropdown
-        width: 100%; // Hacer que el ancho sea 100% del contenedor
+        max-width: 200px; 
+        width: 100%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        position: absolute; // Posicionamiento absoluto
-        top: calc(100% + 5px); // Posicionar justo debajo del botón con margen
-        left: 0; // Alinear con el borde izquierdo del contenedor
-        display: none; // Ocultar el dropdown por defecto
+        position: absolute;
+        top: calc(100% + 5px); 
+        left: 0; 
+        display: none;
 
-        // Mostrar el dropdown al hacer clic (Bootstrap se encargará de esto)
+        
         &.show {
-            display: block; // Mostrar el dropdown cuando está activo
+            display: block;
         }
     }
 
     .dropdown-item {
         color: black; 
-        padding: 8px 12px; // Espaciado interno
+        padding: 8px 12px; 
 
         &:hover {
             background-color: $color-primary;
@@ -57,7 +55,7 @@
     object-fit: cover;
 }
 
-// Estilos de la barra de busqueda
+/* Estilos de la barra de busqueda */
 .navbar.bg-body-tertiary {
     border-bottom: 2px solid $color-secondary; 
     display: flex;
@@ -83,3 +81,74 @@
 .navbar .btn-outline-success {
     @include button();
 }
+
+/* Media queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    /* Ajustes para la barra de búsqueda */
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .navbar .container-fluid {
+        justify-content: center;
+        margin: 4px;
+    }
+
+    .navbar .form-control {
+        width: 100%;
+        margin-bottom: 1px;
+    }
+
+    .navbar .btn-outline-success {
+        width: 30%;
+    }
+
+    /* Ajustes para el botón de usuario y menú desplegable */
+    .btn-group {
+        margin-left: 0;
+        max-width: 100px;
+    }
+
+    .dropdown-menu {
+        max-width: 100%;
+        top: calc(100% + 5px);
+    }
+
+    .dropdown-item {
+        font-size: 14px;
+    }
+}
+
+/* Pantallas medianas*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Ajustes para la barra de búsqueda */
+    .navbar {
+        padding: 15px 20px;
+        background-color: $color-background;
+        position: relative; 
+    }
+
+    .navbar .form-control {
+        max-width: 80%; 
+        margin-right: 15px; 
+    }
+
+    .navbar .btn-outline-success {
+        width: auto;
+        margin-left: 5px;
+    }
+
+    .dropdown-menu {
+        max-width: 250px;
+        top: calc(100% + 5px);
+        left: auto;
+    }
+
+    .dropdown-item {
+        font-size: 16px;
+    }
+
+}
+

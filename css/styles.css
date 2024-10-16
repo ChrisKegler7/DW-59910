@@ -15,7 +15,16 @@ body {
   font-family: "Playfair Display", serif;
 }
 
-h1, h2 {
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #944e63;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+h2 {
+  font-size: 2.5em;
   text-align: center;
   margin: 20px 0;
   color: #944e63;
@@ -60,7 +69,7 @@ header .logo {
   max-height: 100px;
   display: block;
 }
-header .main-menu, header footer .footer-menu, footer header .footer-menu {
+header .main-menu, header .footer-menu {
   grid-column: 6/span 2;
   grid-row: auto;
   font-family: "Playfair Display", serif;
@@ -76,8 +85,9 @@ header .main-menu, header footer .footer-menu, footer header .footer-menu {
   height: auto;
   margin: 0;
   padding: 0;
+  z-index: inherit;
 }
-header .main-menu ul, header footer .footer-menu ul, footer header .footer-menu ul {
+header .main-menu ul, header .footer-menu ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -88,12 +98,12 @@ header .main-menu ul, header footer .footer-menu ul, footer header .footer-menu 
   padding: 0;
   margin: 0;
 }
-header .main-menu ul li, header footer .footer-menu ul li, footer header .footer-menu ul li {
+header .main-menu ul li, header .footer-menu ul li {
   margin: 0 5px;
 }
-header .main-menu ul li a, header footer .footer-menu ul li a, footer header .footer-menu ul li a {
+header .main-menu ul li a, header .footer-menu ul li a {
   display: block;
-  padding: 6px 10px;
+  padding: 2px 10px;
   text-decoration: none;
   color: #dbc9a7;
   background-color: #944e63;
@@ -101,18 +111,82 @@ header .main-menu ul li a, header footer .footer-menu ul li a, footer header .fo
   border-bottom: 2px solid #dbc9a7;
   border-radius: 8px 8px 0 0;
 }
-header .main-menu ul li a.active, header footer .footer-menu ul li a.active, footer header .footer-menu ul li a.active {
+header .main-menu ul li a.active, header .footer-menu ul li a.active {
   color: #944e63;
   background-color: #ebded2;
   border-bottom: 2px solid #ebded2;
 }
-header .main-menu ul li a:hover, header footer .footer-menu ul li a:hover, footer header .footer-menu ul li a:hover {
+header .main-menu ul li a:hover, header .footer-menu ul li a:hover {
   background-color: #dbc9a7;
   color: #944e63;
   border-bottom: 2px solid #944e63;
 }
 
-/* Estilos del footer */
+/* Media Queries */
+/* Pantallas pequeñas (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
+    gap: center;
+    /* Mantén las 7 columnas */
+  }
+  header .titulo-html {
+    grid-column: 1/span 3;
+    grid-row: auto;
+    text-align: left;
+    margin-left: 10%;
+    font-size: 1.5em;
+  }
+  header .logo-index {
+    grid-column: 1/span 1;
+    grid-row: auto;
+    justify-self: center;
+    align-self: center;
+    margin: 0 auto;
+    max-height: 70px;
+  }
+  header .logo {
+    grid-column: 4/span 1;
+    grid-row: auto;
+    justify-self: center;
+    align-self: center;
+    margin: 0 auto;
+    max-height: 70px;
+  }
+  header .main-menu, header .footer-menu {
+    grid-column: 7/span 1;
+    grid-row: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: normal;
+  }
+  header .main-menu ul, header .footer-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: normal;
+  }
+  header .main-menu ul li, header .footer-menu ul li {
+    margin: 5px 0;
+  }
+  header .main-menu ul a, header .footer-menu ul a {
+    padding: 8px 10px;
+    font-size: 0.9em;
+  }
+}
+/* Importar variables */
+/* Estilos del footer*/
 footer {
   background-color: #944e63;
   position: fixed;
@@ -120,32 +194,158 @@ footer {
   bottom: 0;
   height: 60px;
   color: #dbc9a7;
-  text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  z-index: 1000;
-  /* Menu de navegacion en el footer */
+  flex-wrap: nowrap;
+  align-content: normal;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 0.9em;
 }
-footer p {
-  margin-top: 20px;
+
+/* Sección principal del footer con mixin flex */
+.footer-sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: normal;
+  flex-grow: 1;
 }
-footer .footer-menu {
+
+/* Sección de contacto */
+.footer-contacto h5 {
+  margin: 0;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+.footer-contacto p {
+  margin: 0;
+  font-size: 0.85em;
+  line-height: 1.2em;
+}
+
+/* Sección de derechos reservados */
+.footer-derechos {
+  margin-left: 20px;
+  font-size: 1.1em;
+  margin-top: 15px;
+}
+
+/* Links en el footer utilizando mixin button */
+.footer-links {
+  margin: 0 20px;
+  margin-top: 15px;
+}
+.footer-links a {
+  background-color: #944e63;
+  color: #dbc9a7;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  border-color: transparent;
+  padding: 5px 10px;
+  font-size: 1em;
+}
+.footer-links a:hover {
+  background-color: #dbc9a7;
+  color: #944e63;
+  box-shadow: 0 1px 5px black;
+}
+
+/* Ajustes responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: normal;
+    height: auto;
+    padding: 10px 0;
+  }
+  .footer-sections {
+    display: none;
+  }
+}
+/* Menu de navegacion en el footer */
+.footer-menu {
   display: none;
   position: static;
   text-align: center;
 }
 
+/* Media Queries */
+/* Pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  /* Oculta el menú en el header */
+  header .main-menu, header .footer-menu {
+    display: none;
+  }
+  footer {
+    padding-top: 0;
+  }
+  footer p {
+    display: none;
+  }
+  /* Muestra el menú en el footer */
+  footer .footer-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #944e63;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  /* Estilos de header pero invertidos */
+  footer .footer-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: normal;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  footer .footer-menu ul li {
+    margin: 0 8px;
+  }
+  footer .footer-menu ul li a {
+    display: block;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: #dbc9a7;
+    background-color: #944e63;
+    border-radius: 0px 0px 8px 8px;
+    border-top: 2px solid #dbc9a7;
+  }
+  footer .footer-menu ul li a.active {
+    color: #944e63;
+    background-color: #ebded2;
+    border-top: 2px solid #ebded2;
+  }
+  footer .footer-menu ul li a:hover {
+    background-color: #dbc9a7;
+    color: #944e63;
+    border-top: 2px solid #dbc9a7;
+  }
+}
+/* Pantallas grandes*/
+@media screen and (min-width: 769px) {
+  /* Oculta el menú en el footer en pantallas grandes */
+  footer .footer-menu {
+    display: none;
+  }
+}
 .btn-group {
-  grid-column: 7;
+  grid-column: 7/span 1;
   grid-row: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  align-content: normal;
-  position: relative;
+  align-items: center;
   margin-left: 80px;
 }
 .btn-group .btn-secondary {
@@ -193,6 +393,7 @@ footer .footer-menu {
   object-fit: cover;
 }
 
+/* Estilos de la barra de busqueda */
 .navbar.bg-body-tertiary {
   border-bottom: 2px solid #dbc9a7;
   display: flex;
@@ -229,6 +430,64 @@ footer .footer-menu {
   box-shadow: 0 1px 5px black;
 }
 
+/* Media queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+  /* Ajustes para la barra de búsqueda */
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+  }
+  .navbar .container-fluid {
+    justify-content: center;
+    margin: 4px;
+  }
+  .navbar .form-control {
+    width: 100%;
+    margin-bottom: 1px;
+  }
+  .navbar .btn-outline-success {
+    width: 30%;
+  }
+  /* Ajustes para el botón de usuario y menú desplegable */
+  .btn-group {
+    margin-left: 0;
+    max-width: 100px;
+  }
+  .dropdown-menu {
+    max-width: 100%;
+    top: calc(100% + 5px);
+  }
+  .dropdown-item {
+    font-size: 14px;
+  }
+}
+/* Pantallas medianas*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Ajustes para la barra de búsqueda */
+  .navbar {
+    padding: 15px 20px;
+    background-color: #ebded2;
+    position: relative;
+  }
+  .navbar .form-control {
+    max-width: 80%;
+    margin-right: 15px;
+  }
+  .navbar .btn-outline-success {
+    width: auto;
+    margin-left: 5px;
+  }
+  .dropdown-menu {
+    max-width: 250px;
+    top: calc(100% + 5px);
+    left: auto;
+  }
+  .dropdown-item {
+    font-size: 16px;
+  }
+}
+/*Contenido principal*/
 .contenido-principal {
   display: flex;
   flex-direction: column;
@@ -253,7 +512,15 @@ footer .footer-menu {
 .contenido-principal-texto {
   padding: 20px;
   max-width: 60%;
-  text-align: left;
+  text-align: center;
+}
+.contenido-principal-texto h2 {
+  font-size: xx-large;
+}
+.contenido-principal-texto p {
+  font-size: larger;
+  font-style: oblique;
+  font-weight: bold;
 }
 
 .contenido-principal-imagen {
@@ -262,10 +529,12 @@ footer .footer-menu {
 }
 
 .contenido-principal-imagen img {
-  width: 100%;
+  width: 80%;
+  margin: 40px;
   border-radius: 8px;
 }
 
+/*Estilos para los destacados*/
 .destacados {
   padding: 50px;
   padding-top: 2px;
@@ -398,6 +667,7 @@ footer .footer-menu {
   transform: translateY(-2px);
 }
 
+/*Estilos para la sección de suscripción*/
 .cta {
   padding: 20px;
   background-color: #944e63;
@@ -455,6 +725,7 @@ footer .footer-menu {
   box-shadow: 0 1px 5px black;
 }
 
+/* Estilos generales para el catálogo*/
 .catalogo {
   padding: 20px;
   max-width: 80%;
@@ -462,6 +733,7 @@ footer .footer-menu {
   text-align: center;
 }
 
+/* Estilo para los items del catálogo*/
 .catalogo-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -507,6 +779,7 @@ footer .footer-menu {
   margin-top: auto;
 }
 
+/*Estilo para el botón de detalles*/
 .btn-detalles {
   background-color: #944e63;
   color: #dbc9a7;
@@ -575,6 +848,7 @@ footer .footer-menu {
 
 .pagina-derecha h4 {
   margin-bottom: 50px;
+  font-style: oblique;
 }
 
 .pagina-derecha p {
@@ -598,24 +872,67 @@ footer .footer-menu {
   box-shadow: 0 1px 5px black;
 }
 
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .contenido-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: normal;
+  }
+  .texto-imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: normal;
+    width: 100%;
+  }
+  .contenido-principal-texto {
+    max-width: 100%;
+    text-align: center;
+  }
+  .contenido-principal-imagen {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  /* Ocultar la página izquierda (imagen del libro) */
+  .pagina-izquierda {
+    display: none;
+  }
+  /* Ajuste de la sección de detalles */
+  .detalles {
+    height: auto;
+    padding: 10px;
+  }
+  /* Ajustar la página derecha para pantallas muy pequeñas */
+  .pagina-derecha {
+    width: 100%;
+  }
+}
 .opiniones-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-template-rows: auto;
   grid-auto-rows: auto;
   grid-auto-flow: row;
   gap: 20px;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 .opinion {
+  flex: 1 1 300px;
+  max-width: 1fr;
   background-color: #fff;
   border: 1px solid #a8a8a8;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  margin: 5% 5% 5%;
-  padding: 0%;
+  margin: 5%;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s;
@@ -628,16 +945,21 @@ footer .footer-menu {
 
 .opinion-header {
   background-color: #944e63;
-  color: #fff; /* Color del texto del header */
+  color: #fff;
   width: 100%;
   padding: 5px;
-  text-align: center;
   border-radius: 8px 8px 0 0;
+  font-weight: bold;
 }
 
 .opinion-texto {
   margin-bottom: 10px;
   text-align: center;
+}
+.opinion-texto h4 {
+  font-size: 120%;
+  padding: 12px;
+  font-style: oblique;
 }
 
 .opinion-rating {
@@ -676,7 +998,7 @@ footer .footer-menu {
   border-radius: 8px;
   display: block;
   margin: 20px auto;
-  padding: 10px;
+  padding: 7px;
   max-width: 150px;
   text-align: center;
 }
@@ -840,150 +1162,6 @@ footer .footer-menu {
 .perfil-usuario ul li {
   padding: 10px;
   border-bottom: 1px #ccc;
-}
-
-/* Media queries para dispositivos pequeños */
-@media screen and (max-width: 768px) {
-  /* Oculta el menú en el header */
-  header .main-menu, header footer .footer-menu, footer header .footer-menu {
-    display: none;
-  }
-  footer {
-    padding-top: 0;
-  }
-  footer p {
-    display: none;
-  }
-  /* Muestra el menú en el footer */
-  footer .footer-menu {
-    display: flex;
-    flex-direction: column;
-    background-color: #944e63;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  /* Estilos de header pero invertidos */
-  footer .footer-menu ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    align-content: normal;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  footer .footer-menu ul li {
-    margin: 0 8px;
-  }
-  footer .footer-menu ul li a {
-    display: block;
-    padding: 6px 10px;
-    text-decoration: none;
-    color: #dbc9a7;
-    background-color: #944e63;
-    border-radius: 0px 0px 8px 8px;
-    border-top: 2px solid #dbc9a7;
-  }
-  footer .footer-menu ul li a.active {
-    color: #944e63;
-    background-color: #ebded2;
-    border-bottom: 2px solid #ebded2;
-  }
-  footer .footer-menu ul li a:hover {
-    background-color: #dbc9a7;
-    color: #944e63;
-    border-top: 2px solid #dbc9a7;
-  }
-  .contenido-principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    align-content: normal;
-  }
-  .texto-imagen {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    align-content: normal;
-    width: 100%;
-  }
-  .contenido-principal-texto {
-    max-width: 100%;
-    text-align: center;
-  }
-  .contenido-principal-imagen {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-  /* Ocultar la página izquierda (imagen del libro) */
-  .pagina-izquierda {
-    display: none;
-  }
-  /* Ajuste de la sección de detalles */
-  .detalles {
-    height: auto;
-    padding: 10px;
-  }
-  /* Ajustar la página derecha para pantallas muy pequeñas */
-  .pagina-derecha {
-    width: 100%;
-  }
-}
-/* Media queries para pantallas medianas (768px a 1024px) */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Ocultar la página izquierda (imagen del libro) */
-  .pagina-izquierda {
-    display: none;
-  }
-  /* Ajuste de la sección de detalles */
-  .detalles {
-    height: auto;
-    padding: 15px;
-  }
-  /* Ajustar la página derecha para pantallas medianas */
-  .pagina-derecha {
-    width: 100%;
-  }
-  /* Ajustar encabezados */
-  .pagina-derecha h2 {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-  }
-  .pagina-derecha h3 {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-  }
-  .pagina-derecha h4 {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-  }
-  /* Ajustar el texto */
-  .pagina-derecha p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 0 10px;
-    margin-bottom: 10px;
-  }
-  /* Ajuste del botón de regresar */
-  .btn-regresar {
-    padding: 10px 15px;
-    font-size: 0.9rem;
-    width: auto;
-    margin-top: 20px;
-  }
-}
-/* Media queries para pantallas grandes */
-@media screen and (min-width: 769px) {
-  /* Oculta el menú en el footer en pantallas grandes */
-  footer .footer-menu {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -45,6 +45,7 @@
 
 .pagina-derecha h4 {
     margin-bottom: 50px;
+    font-style: oblique;
 }
 
 .pagina-derecha p {
@@ -58,3 +59,41 @@
     padding: 10px;
 }
 
+/* Media Queries */
+@media screen and (max-width: 768px) {
+.contenido-principal {
+    @include flex(column, center);
+}
+
+.texto-imagen {
+    @include flex(column); 
+    width: 100%; 
+}
+
+.contenido-principal-texto {
+    max-width: 100%;
+    text-align: center;
+}
+
+.contenido-principal-imagen {
+    max-width: 100%; 
+    margin-top: 20px; 
+}
+
+    /* Ocultar la página izquierda (imagen del libro) */
+.pagina-izquierda {
+    display: none;
+}
+
+/* Ajuste de la sección de detalles */
+.detalles {
+    height: auto; 
+    padding: 10px; 
+}
+
+/* Ajustar la página derecha para pantallas muy pequeñas */
+.pagina-derecha {
+    width: 100%; 
+
+}
+}

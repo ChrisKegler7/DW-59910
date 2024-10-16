@@ -1,16 +1,19 @@
 // Estilos de opiniones
 .opiniones-container {
-    @include grid(repeat(auto-fit, minmax(300px, 1fr)), auto, 20px);
-    padding:  $padding-standard;
+    @include grid(repeat(auto-fill, minmax(300px, 1fr)), auto, 20px);
+    padding: $padding-standard;
+    flex-wrap: wrap;
+    
 }
 
 .opinion {
+    flex: 1 1 300px;
+    max-width: 1fr;
     background-color: #fff; 
     @include border(); 
     display: flex;
     flex-direction: column;
-    margin: 5% 5% 5% ;
-    padding: 0%;
+    margin: 5% ;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     transition: box-shadow $transition-duration; 
@@ -19,16 +22,24 @@
 
 .opinion-header {
     background-color: $color-primary;
-    color: #fff; /* Color del texto del header */
+    color: #fff;
     width: 100%;
     padding: 5px;
-    text-align: center;
     border-radius: 8px 8px 0 0;
+    font-weight: bold;
+    
+    
 }
 
 .opinion-texto {
     margin-bottom: 10px;
     text-align: center;
+    
+    h4{
+        font-size: 120%;
+        padding: 12px;
+        font-style: oblique;
+    }
 }
 
 .opinion-rating {
@@ -61,7 +72,7 @@
     @include border(); 
     display: block;
     margin: 20px auto;
-    padding: 10px;
+    padding: 7px;
     max-width: 150px;
     text-align: center; 
 }

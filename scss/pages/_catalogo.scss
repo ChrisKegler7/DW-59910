@@ -1,4 +1,4 @@
-// Estilos generales para el catálogo
+/* Estilos generales para el catálogo*/
 .catalogo {
     padding: $padding-standard;
     max-width: 80%; 
@@ -6,7 +6,7 @@
     text-align: center; 
 }
 
-// Estilo para los items del catálogo
+/* Estilo para los items del catálogo*/
 .catalogo-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -47,7 +47,7 @@
     margin-top: auto;
 }
 
-// Estilo para el botón de detalles
+/*Estilo para el botón de detalles*/ 
 .btn-detalles {
     @include button();
     padding: 1px;

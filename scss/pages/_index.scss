@@ -1,6 +1,6 @@
 @import '../utilidades/variables';
 
-// Contenido principal
+/*Contenido principal*/ 
 .contenido-principal {
     @include flex(column, center);
     margin: 20px auto;
@@ -15,7 +15,18 @@
 .contenido-principal-texto {
     padding: $padding-standard;
     max-width: 60%;
-    text-align: left;
+    text-align: center;
+
+    h2{
+        font-size: xx-large;
+    }
+
+    p{
+        font-size: larger;
+        font-style: oblique ;
+        font-weight: bold;
+    }
+    
 }
 
 .contenido-principal-imagen {
@@ -24,11 +35,12 @@
 }
 
 .contenido-principal-imagen img {
-    width: 100%;
+    width: 80%;
+    margin: 40px;
     border-radius: $border-radius;
 }
 
-// Estilos para los destacados
+/*Estilos para los destacados*/ 
 .destacados {
     padding: 50px;
     padding-top: 2px;
@@ -107,19 +119,19 @@
     margin: 40px 0;
 
     h2 {
-        font-size: 2em; // Tamaño de la fuente para el título
-        color: $color-secondary; // Color primario
-        margin-bottom: 20px; // Espaciado inferior
+        font-size: 2em; 
+        color: $color-secondary; 
+        margin-bottom: 20px; 
     }
 
     ul {
         list-style: none;
         
         li button {
-            background-color: #fff; // Color de fondo blanco para cada elemento
-            margin: 10px 0; // Espaciado entre elementos
-            padding: 15px; // Espaciado interno
-            border: 1px solid #ddd; // Bordes suaves
+            background-color: #fff; 
+            margin: 10px 0;
+            padding: 15px; 
+            border: 1px solid #ddd; 
             border-radius: $border-radius;
             box-shadow: 0 1px 3px rgb(15, 15, 15);
             transition: transform $transition-duration;
@@ -132,14 +144,14 @@
     }
 }
 
-// Estilos para la sección de suscripción
+/*Estilos para la sección de suscripción*/ 
 .cta {
-    padding: $padding-standard; // Espaciado interno estándar
-    background-color: $color-primary; // Color de fondo
-    border-radius: $border-radius; // Bordes redondeados
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 5); // Sombra sutil
-    text-align: center; // Centra el texto
-    margin: 40px 0; // Margen superior e inferior
+    padding: $padding-standard; 
+    background-color: $color-primary; 
+    border-radius: $border-radius; 
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 5); 
+    text-align: center; 
+    margin: 40px 0; 
     color: #fff;
 }
 
