@@ -1,3 +1,5 @@
+LINK DEL DOMINIO :  http://inkspot.free.nf/
+
 #Librería Online - Maquetación
 
 Este proyecto consiste en la maquetación visual de una librería online. Fue desarrollado utilizando HTML, CSS, y Sass para crear un diseño atractivo y responsive que se adapta a diferentes dispositivos. El proyecto está enfocado en la parte visual y está subido a un dominio para su visualización.
