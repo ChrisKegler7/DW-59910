@@ -1,12 +1,17 @@
-#Tercera pre-entrega:
+#Librería Online - Maquetación
+Este proyecto consiste en la maquetación visual de una librería online. Fue desarrollado utilizando HTML, CSS, y Sass para crear un diseño atractivo y responsive que se adapta a diferentes dispositivos. El proyecto está enfocado en la parte visual y está subido a un dominio para su visualización.
 
--Se realizaron los cambios correspondientes a la devolucion de la segunda pre-entrega.
+#Descripción
+Este sitio web representa la interfaz visual de una librería, donde los usuarios pueden navegar por las diferentes secciones de libros, ver detalles de productos, y acceder a su perfil de usuario. El diseño está optimizado para ser completamente responsive, asegurando una experiencia de usuario fluida tanto en dispositivos móviles como en pantallas de escritorio.
 
--Se implemento SASS al proyecto para una mejor escritura y edicion del codigo.
+#Tecnologías utilizadas
+HTML5: Estructura semántica de las páginas web.
+CSS3: Estilos y diseño responsive.
+Sass (SCSS): Preprocesador CSS para una mejor organización y reutilización de estilos.
+Flexbox y Grid: Para la creación de layouts modernos y adaptables.
+Responsive Design: El sitio está optimizado para dispositivos móviles, tablets y pantallas de escritorio.
 
--Se realizaron cambios en los nombres de archivos, alt de imagenes y otros correspondientes a SEO.
-
--Se realizaron cambios para que el diseño sea adecuado para mobile, tablet y desktop.
-
-Comentario adicional: ya que el proyecto no posee funcionalidades, en el apartado de detalles de libros, se realizaron 4 htmls que contienen la descripcion de 4 libros los cuales son los destacados del index.
-el resto que estan en el catalogo comparten detalles.html en el cual se da un mensaje de "no esta disponible la descripcion" para no sobrecargar el proyecto con htmls innecesarios a mi parecer.
+#Funcionalidades visuales
+Navegación: Un menú de navegación intuitivo con enlaces a las principales secciones del sitio.
+Sistema de reseñas: Una sección dedicada a opiniones, con un diseño moderno y atractivo.
+Diseño responsive: El diseño se adapta a diferentes resoluciones de pantalla, ofreciendo una experiencia de usuario coherente en todos los dispositivos.
